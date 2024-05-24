@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroides</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #222;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #gameContainer {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #fff;
+        }
+        canvas {
+            display: block;
+        }
+        #footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        #score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+        }
+        #highscores {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            text-align: right;
+        }
+        #difficulty {
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            font-size: 16px;
+        }
+        select {
+            background: #444;
+            color: #fff;
+            border: none;
+            padding: 5px;
+            font-size: 16px;
+        }
+        #startButton {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #444;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        #startButton:hover {
+            background: #555;
+        }
+        #title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        #instructions {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+            max-width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">Asteroides</div>
+    <div id="instructions">
+        Mueve el ratón para evitar los asteroides. Cada 500 puntos, la velocidad de los asteroides aumentará y se agregarán más asteroides según la dificultad seleccionada. Si un asteroide te golpea, el juego terminará.
+    </div>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="score">Puntuación: 0</div>
+        <div id="highscores">Mejores Puntuaciones:<br></div>
+        <div id="difficulty">
+            Dificultad:
+            <select id="difficultySelect">
+                <option value="1">Fácil</option>
+                <option value="2">Medio</option>
+                <option value="3">Difícil</option>
+            </select>
+        </div>
+        <button id="startButton">Iniciar Juego</button>
+        <div id="footer">José Meneses</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

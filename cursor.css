@@ -1,0 +1,99 @@
+body.hidden-cursor {
+    cursor: none;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #222;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#gameContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #fff;
+}
+
+canvas {
+    display: block;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+}
+
+#highscores {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    text-align: right;
+}
+
+#difficulty {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    font-size: 16px;
+}
+
+select {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#startButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#startButton:hover {
+    background: #555;
+}
+
+#title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#instructions {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 80%;
+}
